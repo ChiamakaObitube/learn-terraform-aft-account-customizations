@@ -1,4 +1,4 @@
-data "aws_caller_identity" "current" {}
+#data "aws_caller_identity" "current" {}
 
 resource "aws_ssm_parameter" "secret" {
   name        = "/custom-${data.aws_caller_identity.current.account_id}/hello"
